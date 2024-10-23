@@ -37,6 +37,13 @@ import photoshop from "./collaboration/photoshop.png";
 import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
+import react from "./collaboration/react_logo-removebg-preview.png"
+import flutter from "./collaboration/flutter_logo-removebg-preview.png"
+import js from "./collaboration/js_logo-removebg-preview.png"
+import nodejs from "./collaboration/nodejs.png"
+import wordpress from "./collaboration/wp-removebg-preview.png"
+import aws from "./collaboration/aws-removebg-preview.png"
+import cloud from "./collaboration/gc-removebg-preview.png"
 
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
@@ -92,8 +99,11 @@ export {
   yourlogo,
   homeSmile,
   file02,
+  react,
   searchMd,
   plusSquare,
+  flutter,
+  js,
   recording03,
   recording01,
   disc02,
@@ -149,4 +159,8 @@ export {
   instagram,
   telegram,
   twitter,
+  nodejs,
+  wordpress,
+  aws,
+  cloud,
 };
