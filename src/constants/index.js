@@ -33,6 +33,10 @@ import {
   roadmap3,
   roadmap4,
   searchMd,
+  html,
+  css,
+  bootstrap,
+  github,
   slack,
   sliders04,
   telegram,
@@ -93,11 +97,10 @@ export const brainwaveServices = [
 ];
 
 export const brainwaveServicesIcons = [
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
+  html,
+  bootstrap,
+  css,
+  github
 ];
 
 export const roadmap = [

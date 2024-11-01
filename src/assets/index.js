@@ -26,6 +26,12 @@ import photoscan from "./collaboration/photoscan.png"
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
+import html from "./html5.png"
+// import css from "./css3.png"
+import css from "./css-removebg-preview.png"
+// import bootstrap from './bootstrap.png'
+import bootstrap from "./bootstrap-removebg-preview.png"
+import github from './github.png'
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -48,6 +54,7 @@ import cloud from "./collaboration/gc-removebg-preview.png"
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
 import service3 from "./services/service-3.png";
+import poster from "./poster_bootcamp.jpg"
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
@@ -158,9 +165,14 @@ export {
   facebook,
   instagram,
   telegram,
+  poster,
   twitter,
   nodejs,
   wordpress,
   aws,
   cloud,
+  html,
+  css,
+  bootstrap,
+  github
 };
