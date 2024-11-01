@@ -8,8 +8,8 @@ import {
   VideoBar,
   VideoChatMessage,
 } from "./design/Services";
-
 import Generating from "./Generating";
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 const Services = () => {
   return (
@@ -72,7 +72,7 @@ const Services = () => {
           />
 
           {/* Centered Form */}
-          <div className="relative z-1 flex  h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]flex justify-center items-center min-h-screen p-8">
+          <div className="relative z-1 flex h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem] flex justify-center items-center min-h-screen p-8">
             <form className="w-full max-w-2xl p-10">
               {/* Name Field */}
               <div className="mb-6">
@@ -132,6 +132,14 @@ const Services = () => {
                 >
                   Submit
                 </button>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex justify-center mt-4 space-x-6 text-white text-2xl">
+                <FaInstagram className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaFacebookF className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaWhatsapp className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaLinkedinIn className="cursor-pointer hover:text-yellow-400 transition" />
               </div>
             </form>
           </div>
