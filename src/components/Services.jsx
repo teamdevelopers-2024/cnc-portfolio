@@ -83,12 +83,14 @@ const Services = () => {
                     us!
                   </p>
                   <div className="flex justify-center mt-4">
-                  <button className="px-6 py-2 border border-purple-500 bg-transparent text-white rounded-lg transition duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-500/50">
-  <a href="https://rzp.io/rzp/cacbootcamp" className="text-white">
-    Register Now
-  </a>
-</button>
-
+                    <button className="px-6 py-2 border border-purple-500 bg-transparent text-white rounded-lg transition duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-500/50">
+                      <a
+                        href="https://rzp.io/rzp/cacbootcamp"
+                        className="text-white"
+                      >
+                        Register Now
+                      </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -97,45 +99,76 @@ const Services = () => {
             <Gradient />
           </div>
           <Section id="contactus">
-            <div className="mt-10">
-              <Heading
-                title="Generative AI made for creators."
-                text="Brainwave unlocks the potential of AI-powered applications"
-              />
-              <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
-                  <img
-                    className="w-full h-full object-cover md:object-right"
-                    width={800}
-                    alt="Smartest AI"
-                    height={730}
-                    src={service1}
+            <Heading
+              title="Get in Touch with Us"
+              text="Have a project in mind or need expert guidance? At Code&Click, we’re here to help you navigate your digital journey. Reach out today to discuss how our innovative solutions can transform your ideas into impactful results. Let’s collaborate and make your vision a reality!"
+            />
+            <div className="relative z-1 flex  h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]flex justify-center items-center min-h-screen p-8">
+              <form className="w-full max-w-2xl p-10">
+                {/* Name Field */}
+                <div className="mb-6">
+                  <label className="block text-white font-semibold mb-2">
+                    Name <span className="text-yellow-400">*</span>
+                  </label>
+                  <div className="flex space-x-4">
+                    <input
+                      type="text"
+                      placeholder="First"
+                      className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last"
+                      className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
+                    />
+                  </div>
+                </div>
+                {/* Mobile Number Field */}
+                <div className="mb-6">
+                  <label className="block text-white font-semibold mb-2">
+                    Mobile Number
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your mobile number"
+                    className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                   />
                 </div>
-
-            <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
-              </p>
-              <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
+                {/* Email Field */}
+                <div className="mb-6">
+                  <label className="block text-white font-semibold mb-2">
+                    Email <span className="text-yellow-400">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
+                  />
+                </div>
+                {/* Description Field */}
+                <div className="mb-6">
+                  <label className="block text-white font-semibold mb-2">
+                    Description
+                  </label>
+                  <textarea
+                    placeholder="Enter a description"
+                    className="w-full h-32 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none resize-none"
+                  />
+                </div>
+                {/* Submit Button */}
+                <div className="flex justify-center mt-8">
+                  <button
+                    type="submit"
+                    className="bg-yellow-400 text-n-8 font-semibold px-10 py-3 rounded-xl hover:bg-yellow-500 transition"
                   >
-                    <img width={24} height={24} src={check} />
-                    <p className="ml-4">{item}</p>
-                  </li>
-                ))}
-              </ul>
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
-          </div>
-          <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+          </Section>
         </div>
-        </Section>
-      </div>
-    </Section>
+      </Section>
     </>
   );
 };
