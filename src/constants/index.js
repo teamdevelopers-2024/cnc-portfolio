@@ -43,6 +43,7 @@ import {
   twitter,
   yourlogo,
   photoscan,
+  ivanios,
   nodejs,
   wordpress,
   aws,
@@ -88,7 +89,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [photoscan];
+export const companyLogos = [photoscan,ivanios];
 
 export const brainwaveServices = [
   "Photo generating",

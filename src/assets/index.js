@@ -22,6 +22,7 @@ import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
 import photoscan from "./collaboration/photoscan.png"
+import ivanios from "./ivanios logo.png"
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -146,6 +147,7 @@ export {
   roadmap3,
   roadmap4,
   undone,
+  ivanios,
   notification1,
   notification2,
   notification3,
