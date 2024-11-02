@@ -339,7 +339,7 @@ export const socials = [
     id: "0",
     title: "Instagram",
     iconUrl: instagram,
-    url: "https://www.instagram.com/_code_and_click_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    url: "https://www.instagram.com/_kode_and_klick_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   // {
   //   id: "3",

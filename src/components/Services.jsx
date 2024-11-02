@@ -12,6 +12,12 @@ import {
 import Generating from "./Generating";
 import { useState } from "react";
 import axios from "axios";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Services = () => {
   const [firstName, setFirstName] = useState("");
@@ -31,7 +37,7 @@ const Services = () => {
     };
 
     try {
-      console.log("working")
+      console.log("working");
       const response = await axios.post(
         "https://script.google.com/macros/s/AKfycbz05VVCVWg44U7sFBmOb0j0ukzZc0CYttzkdNscoKjnbFlKR_vWccWXohnIr856DfFv/exec",
         {
@@ -42,8 +48,7 @@ const Services = () => {
           body: JSON.stringify(data),
         }
       );
-      console.log("api response",response);
-      
+      console.log("api response", response);
 
       if (response.ok) {
         alert("Form submitted successfully");
@@ -56,7 +61,7 @@ const Services = () => {
         alert("Error submitting form");
       }
     } catch (error) {
-      console.log("api response : ",error)
+      console.log("api response : ", error);
       alert("Something went wrong");
     }
   };
@@ -152,78 +157,38 @@ const Services = () => {
               title="Get in Touch with Us"
               text="Have a project in mind or need expert guidance? At Code&Click, we’re here to help you navigate your digital journey. Reach out today to discuss how our innovative solutions can transform your ideas into impactful results. Let’s collaborate and make your vision a reality!"
             />
-            <div className="relative z-1 flex  h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]flex justify-center items-center min-h-screen p-8">
-              <form className="w-full max-w-2xl p-10" onSubmit={handleSubmit}>
-                {/* Name Field */}
-                <div className="mb-6">
-                  <label className="block text-white font-semibold mb-2">
-                    Name <span className="text-yellow-400">*</span>
-                  </label>
-                  <div className="flex space-x-4">
-                    <input
-                      type="text"
-                      placeholder="First"
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                      className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last"
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
-                      className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
-                    />
-                  </div>
-                </div>
-                {/* Mobile Number Field */}
-                <div className="mb-6">
-                  <label className="block text-white font-semibold mb-2">
-                    Mobile Number
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your mobile number"
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
-                    className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
-                  />
-                </div>
-                {/* Email Field */}
-                <div className="mb-6">
-                  <label className="block text-white font-semibold mb-2">
-                    Email <span className="text-yellow-400">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
-                  />
-                </div>
-                {/* Description Field */}
-                <div className="mb-6">
-                  <label className="block text-white font-semibold mb-2">
-                    Description
-                  </label>
-                  <textarea
-                    placeholder="Enter a description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    className="w-full h-32 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none resize-none"
-                  />
-                </div>
-                {/* Submit Button */}
-                <div className="flex justify-center mt-8">
-                  <button
-                    type="submit"
-                    className="bg-yellow-400 text-n-8 font-semibold px-10 py-3 rounded-xl hover:bg-yellow-500 transition"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+            <div className="flex justify-center mt-4 space-x-6 text-sm">
+              <a
+                href="https://www.instagram.com/_kode_and_klick_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                className="flex items-center space-x-2 px-3 py-1.5 border border-pink-400 rounded-full bg-transparent transition-all hover:bg-pink-500/10 hover:drop-shadow-[0_0_8px_rgba(255,20,147,0.7)] hover:text-pink-400"
+              >
+                <FaInstagram className="text-2xl drop-shadow-[0_0_4px_rgba(255,20,147,0.6)]" />
+                <span className="text-pink-400">Instagram</span>
+              </a>
+
+              <a
+                href="https://www.facebook.com/people/Code-Click/61562368049071/?mibextid=ZbWKwL"
+                className="flex items-center space-x-2 px-3 py-1.5 border border-blue-400 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(59,89,152,0.7)] hover:text-blue-400"
+              >
+                <FaFacebookF className="text-2xl drop-shadow-[0_0_4px_rgba(59,89,152,0.6)]" />
+                <span className="text-blue-400">Facebook</span>
+              </a>
+
+              <a
+                href="https://wa.me/+916238523977"
+                className="flex items-center space-x-2 px-3 py-1.5 border border-green-400 rounded-full bg-transparent transition-all hover:bg-green-500/10 hover:drop-shadow-[0_0_8px_rgba(37,211,102,0.7)] hover:text-green-400"
+              >
+                <FaWhatsapp className="text-2xl drop-shadow-[0_0_4px_rgba(37,211,102,0.6)]" />
+                <span className="text-green-400">WhatsApp</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/code-and-click-1a377331a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                className="flex items-center space-x-2 px-3 py-1.5 border border-blue-500 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(0,119,181,0.7)] hover:text-blue-500"
+              >
+                <FaLinkedinIn className="text-2xl drop-shadow-[0_0_4px_rgba(0,119,181,0.6)]" />
+                <span className="text-blue-500">LinkedIn</span>
+              </a>
             </div>
           </Section>
         </div>
