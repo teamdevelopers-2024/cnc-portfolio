@@ -123,7 +123,7 @@ const Services = () => {
                   </ul>
                 </div>
 
-                <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem] p-8 text-gray-300 shadow-lg transition-transform duration-300 hover:scale-105">
+                <div className="relative h-auto bg-n-8 rounded-xl overflow-hidden md:h-[25rem] p-8 text-gray-300 shadow-lg transition-transform duration-300 hover:scale-105">
                   <p className="leading-relaxed text-sm md:text-base text-center">
                     Curious about coding? Join our 5-Day Bootcamp and see just
                     how fun (and powerful) web development can be! In one week,
