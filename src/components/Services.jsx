@@ -10,8 +10,57 @@ import {
 } from "./design/Services";
 
 import Generating from "./Generating";
+import { useState } from "react";
+import axios from "axios";
 
 const Services = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: `${firstName} ${lastName}`,
+      mobile,
+      email,
+      description,
+    };
+
+    try {
+      console.log("working")
+      const response = await axios.post(
+        "https://script.google.com/macros/s/AKfycbz05VVCVWg44U7sFBmOb0j0ukzZc0CYttzkdNscoKjnbFlKR_vWccWXohnIr856DfFv/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      console.log("api response",response);
+      
+
+      if (response.ok) {
+        alert("Form submitted successfully");
+        setFirstName("");
+        setLastName("");
+        setMobile("");
+        setEmail("");
+        setDescription("");
+      } else {
+        alert("Error submitting form");
+      }
+    } catch (error) {
+      console.log("api response : ",error)
+      alert("Something went wrong");
+    }
+  };
+
   return (
     <>
       <Section id="bootcamp">
@@ -104,7 +153,7 @@ const Services = () => {
               text="Have a project in mind or need expert guidance? At Code&Click, we’re here to help you navigate your digital journey. Reach out today to discuss how our innovative solutions can transform your ideas into impactful results. Let’s collaborate and make your vision a reality!"
             />
             <div className="relative z-1 flex  h-[39rem] mb-5 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]flex justify-center items-center min-h-screen p-8">
-              <form className="w-full max-w-2xl p-10">
+              <form className="w-full max-w-2xl p-10" onSubmit={handleSubmit}>
                 {/* Name Field */}
                 <div className="mb-6">
                   <label className="block text-white font-semibold mb-2">
@@ -114,11 +163,15 @@ const Services = () => {
                     <input
                       type="text"
                       placeholder="First"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Last"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                       className="w-1/2 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                     />
                   </div>
@@ -131,6 +184,8 @@ const Services = () => {
                   <input
                     type="text"
                     placeholder="Enter your mobile number"
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
                     className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                   />
                 </div>
@@ -142,6 +197,8 @@ const Services = () => {
                   <input
                     type="email"
                     placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                   />
                 </div>
@@ -152,6 +209,8 @@ const Services = () => {
                   </label>
                   <textarea
                     placeholder="Enter a description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                     className="w-full h-32 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none resize-none"
                   />
                 </div>
