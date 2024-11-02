@@ -53,17 +53,17 @@ export const navigation = [
   {
     id: "0",
     title: "Home",
-    url: "#features",
+    url: "#home",
   },
   {
     id: "1",
-    title: "Bootcamp",
-    url: "#bootcamp",
+    title: "Services",
+    url: "#services",
   },
   {
     id: "2",
-    title: "Services",
-    url: "#services",
+    title: "Bootcamp",
+    url: "#bootcamp",
   },
   {
     id: "3",
