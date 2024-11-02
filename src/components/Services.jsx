@@ -157,37 +157,45 @@ const Services = () => {
               title="Get in Touch with Us"
               text="Have a project in mind or need expert guidance? At Code&Click, we’re here to help you navigate your digital journey. Reach out today to discuss how our innovative solutions can transform your ideas into impactful results. Let’s collaborate and make your vision a reality!"
             />
-            <div className="flex justify-center mt-4 space-x-6 text-sm">
+            <div className="flex justify-center mt-4 space-x-4 text-sm flex-wrap">
               <a
                 href="https://www.instagram.com/_kode_and_klick_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                className="flex items-center space-x-2 px-3 py-1.5 border border-pink-400 rounded-full bg-transparent transition-all hover:bg-pink-500/10 hover:drop-shadow-[0_0_8px_rgba(255,20,147,0.7)] hover:text-pink-400"
+                className="flex items-center space-x-2 px-3 py-2 border border-pink-400 rounded-full bg-transparent transition-all hover:bg-pink-500/10 hover:drop-shadow-[0_0_8px_rgba(255,20,147,0.7)] hover:text-pink-400 mb-4" // Added mb-4 for bottom margin
               >
-                <FaInstagram className="text-2xl drop-shadow-[0_0_4px_rgba(255,20,147,0.6)]" />
-                <span className="text-pink-400">Instagram</span>
+                <FaInstagram className="text-2xl md:text-3xl drop-shadow-[0_0_4px_rgba(255,20,147,0.6)]" />
+                <span className="text-pink-400 text-base md:text-lg">
+                  Instagram
+                </span>
               </a>
 
               <a
                 href="https://www.facebook.com/people/Code-Click/61562368049071/?mibextid=ZbWKwL"
-                className="flex items-center space-x-2 px-3 py-1.5 border border-blue-400 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(59,89,152,0.7)] hover:text-blue-400"
+                className="flex items-center space-x-2 px-3 py-2 border border-blue-400 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(59,89,152,0.7)] hover:text-blue-400 mb-4" // Added mb-4 for bottom margin
               >
-                <FaFacebookF className="text-2xl drop-shadow-[0_0_4px_rgba(59,89,152,0.6)]" />
-                <span className="text-blue-400">Facebook</span>
+                <FaFacebookF className="text-2xl md:text-3xl drop-shadow-[0_0_4px_rgba(59,89,152,0.6)]" />
+                <span className="text-blue-400 text-base md:text-lg">
+                  Facebook
+                </span>
               </a>
 
               <a
                 href="https://wa.me/+916238523977"
-                className="flex items-center space-x-2 px-3 py-1.5 border border-green-400 rounded-full bg-transparent transition-all hover:bg-green-500/10 hover:drop-shadow-[0_0_8px_rgba(37,211,102,0.7)] hover:text-green-400"
+                className="flex items-center space-x-2 px-3 py-2 border border-green-400 rounded-full bg-transparent transition-all hover:bg-green-500/10 hover:drop-shadow-[0_0_8px_rgba(37,211,102,0.7)] hover:text-green-400 mb-4" // Added mb-4 for bottom margin
               >
-                <FaWhatsapp className="text-2xl drop-shadow-[0_0_4px_rgba(37,211,102,0.6)]" />
-                <span className="text-green-400">WhatsApp</span>
+                <FaWhatsapp className="text-2xl md:text-3xl drop-shadow-[0_0_4px_rgba(37,211,102,0.6)]" />
+                <span className="text-green-400 text-base md:text-lg">
+                  WhatsApp
+                </span>
               </a>
 
               <a
                 href="https://www.linkedin.com/in/code-and-click-1a377331a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="flex items-center space-x-2 px-3 py-1.5 border border-blue-500 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(0,119,181,0.7)] hover:text-blue-500"
+                className="flex items-center space-x-2 px-3 py-2 border border-blue-500 rounded-full bg-transparent transition-all hover:bg-blue-500/10 hover:drop-shadow-[0_0_8px_rgba(0,119,181,0.7)] hover:text-blue-500 mb-4" // Added mb-4 for bottom margin
               >
-                <FaLinkedinIn className="text-2xl drop-shadow-[0_0_4px_rgba(0,119,181,0.6)]" />
-                <span className="text-blue-500">LinkedIn</span>
+                <FaLinkedinIn className="text-2xl md:text-3xl drop-shadow-[0_0_4px_rgba(0,119,181,0.6)]" />
+                <span className="text-blue-500 text-base md:text-lg">
+                  LinkedIn
+                </span>
               </a>
             </div>
           </Section>
