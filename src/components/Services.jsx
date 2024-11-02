@@ -8,8 +8,8 @@ import {
   VideoBar,
   VideoChatMessage,
 } from "./design/Services";
-
 import Generating from "./Generating";
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 const Services = () => {
   return (
@@ -96,6 +96,7 @@ const Services = () => {
               </div>
             </div>
 
+
             <Gradient />
           </div>
           <Section id="contactus">
@@ -145,6 +146,62 @@ const Services = () => {
                     className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
                   />
                 </div>
+
+              </div>
+
+              {/* Mobile Number Field */}
+              <div className="mb-6">
+                <label className="block text-white font-semibold mb-2">Mobile Number</label>
+                <input
+                  type="text"
+                  placeholder="Enter your mobile number"
+                  className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
+                />
+              </div>
+
+              {/* Email Field */}
+              <div className="mb-6">
+                <label className="block text-white font-semibold mb-2">
+                  Email <span className="text-yellow-400">*</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="w-full p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none"
+                />
+              </div>
+
+              {/* Description Field */}
+              <div className="mb-6">
+                <label className="block text-white font-semibold mb-2">Description</label>
+                <textarea
+                  placeholder="Enter a description"
+                  className="w-full h-32 p-3 bg-n-6 text-white border border-n-5 rounded focus:outline-none resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex justify-center mt-8">
+                <button
+                  type="submit"
+                  className="bg-yellow-400 text-n-8 font-semibold px-10 py-3 rounded-xl hover:bg-yellow-500 transition"
+                >
+                  Submit
+                </button>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex justify-center mt-4 space-x-6 text-white text-2xl">
+                <FaInstagram className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaFacebookF className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaWhatsapp className="cursor-pointer hover:text-yellow-400 transition" />
+                <FaLinkedinIn className="cursor-pointer hover:text-yellow-400 transition" />
+              </div>
+            </form>
+          </div>
+
+          <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+
                 {/* Description Field */}
                 <div className="mb-6">
                   <label className="block text-white font-semibold mb-2">
@@ -167,6 +224,7 @@ const Services = () => {
               </form>
             </div>
           </Section>
+
         </div>
       </Section>
     </>
